@@ -1,3 +1,9 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import useRoutes from "hooks/useRoutes";
+
 export default function App() {
-  return <h1>Octo</h1>;
+  const { routes } = useRoutes();
+  const router = createBrowserRouter(routes);
+
+  return <RouterProvider router={router} />;
 }

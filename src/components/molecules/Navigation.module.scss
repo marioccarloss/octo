@@ -1,0 +1,68 @@
+@use "../settings/colors";
+
+.navigation {
+  display: none;
+
+  &__hamburger {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    z-index: 10;
+
+    &::before,
+    &::after,
+    span {
+      content: "";
+      display: block;
+      background-color: colors.$color-white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.2s ease-in-out;
+      transition-delay: 0;
+      width: 2.375rem;
+      height: 0.1875rem;
+      right: 0;
+    }
+
+    &::before {
+      top: 30%;
+    }
+
+    &::after {
+      top: 70%;
+    }
+
+    &--open {
+      &::before {
+        top: 1.25rem;
+        transform: rotate(40deg) translateY(0.625rem);
+      }
+
+      &::after {
+        top: 2.25rem;
+        transform: rotate(-40deg) translateY(-0.75rem);
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &--open {
+    background-color: colors.$color-primary;
+    color: colors.$color-white;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+  }
+}

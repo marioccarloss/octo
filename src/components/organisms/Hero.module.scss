@@ -1,0 +1,37 @@
+@use "../settings/colors.scss";
+
+.hero {
+  background-color: colors.$color-primary;
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  &__cover {
+    background-color: colors.$color-quaternary;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+    height: 24rem;
+    width: 100%;
+    z-index: 10;
+
+    figure {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3rem;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      z-index: 20;
+    }
+
+    img {
+      width: 22rem;
+      transform: translateX(4rem);
+      display: block;
+    }
+  }
+}

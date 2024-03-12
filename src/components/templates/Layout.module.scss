@@ -1,0 +1,27 @@
+@use "../settings/colors";
+@use "../generic/reset";
+@use "../generic/base";
+
+.layout {
+  background-color: colors.$color-tertiary;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 90%;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+  }
+}

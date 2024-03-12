@@ -1,0 +1,84 @@
+@use "../settings/colors.scss";
+
+.card {
+  background-color: colors.$color-white;
+  display: inline-flex;
+  gap: 1rem;
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.1rem;
+    right: -8rem;
+    width: 0px;
+    height: 0px;
+    border-left: 6rem solid transparent;
+    border-right: 6rem solid transparent;
+    border-top: 6rem solid colors.$color-quaternary;
+    z-index: -1;
+  }
+
+  header {
+    background-color: colors.$color-tertiary;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    letter-spacing: 0.085rem;
+    font-weight: 600;
+  }
+
+  &__price {
+    color: colors.$color-primary;
+    font-family: "Grotesk-Bold-Extended", sans-serif;
+    position: relative;
+    display: inline-flex;
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+    max-width: 20rem;
+    z-index: 10;
+
+    &Dollar {
+      background-color: colors.$color-secondary;
+      border-radius: 100%;
+      font-size: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4.0625rem;
+      width: 4.0625rem;
+      z-index: -1;
+    }
+    &Value {
+      font-size: 3.75rem;
+      letter-spacing: -0.22rem;
+      line-height: 0.82;
+      display: block;
+      word-break: break-all;
+    }
+
+    &Month {
+      padding-left: 2.5rem;
+      font-size: 1.2875rem;
+      display: block;
+      position: relative;
+      z-index: 20;
+    }
+  }
+
+  section {
+    padding: 1rem 1rem 1.5rem 0rem;
+    min-width: 16rem;
+  }
+}

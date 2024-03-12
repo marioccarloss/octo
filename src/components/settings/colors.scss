@@ -1,0 +1,19 @@
+$color-primary: #474e21;
+$color-secondary: #eaff6c;
+$color-tertiary: #f6fcd5;
+$color-quaternary: #d2abe4;
+$color-amber-50: #ffffef;
+$color-amber-100: #feffd1;
+$color-white: #ffffff;
+$color-black: #000000;
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-tertiary: #{$color-tertiary};
+  --color-quaternary: #{$color-quaternary};
+  --color-amber-50: #{$color-amber-50};
+  --color-amber-100: #{$color-amber-100};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+}

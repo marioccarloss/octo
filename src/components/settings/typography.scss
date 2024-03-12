@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Britanica-Bold-Semi-Expanded";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/britanica-bold-semi-expanded.eot");
+  src:
+    url("../../assets/fonts/britanica-bold-semi-expanded.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/britanica-bold-semi-expanded.woff2") format("woff2"),
+    url("../../assets/fonts/britanica-bold-semi-expanded.woff") format("woff"),
+    url("../../assets/fonts/britanica-bold-semi-expanded.ttf")
+      format("truetype"),
+    url("../../assets/fonts/britanica-bold-semi-expanded.svg#britanica-bold-semi-expanded.svg")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Grotesk-Bold-Extended";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/grotesque-mt-std-bold-extended.eot");
+  src:
+    url("../../assets/fonts/grotesque-mt-std-bold-extended.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/grotesque-mt-std-bold-extended.woff2")
+      format("woff2"),
+    url("../../assets/fonts/grotesque-mt-std-bold-extended.woff") format("woff"),
+    url("../../assets/fonts/grotesque-mt-std-bold-extended.ttf")
+      format("truetype"),
+    url("../../assets/fonts/grotesque-mt-std-bold-extended.svg#grotesque-mt-std-bold-extended.svg")
+      format("svg");
+}
+
+$font-primary: "Britanica-Bold-Semi-Expanded", sans-serif;
+$font-secondary: "Grotesk-Bold-Extended", sans-serif;
+$font--primary: 600 1rem / 1.42857143 #{$font-primary};
+$font--secondary: 600 1.42rem / 1.3125rem #{$font-primary};
+$font--tertinary: 600 2rem / 1.1 #{$font-primary};

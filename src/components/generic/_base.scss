@@ -1,0 +1,57 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 13px;
+
+  @media screen and (min-width: sizes.$desktop) {
+    font-size: 16px;
+  }
+}
+
+body {
+  font: typography.$font--primary;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: colors.$color-primary;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+h1 {
+  span {
+    > span {
+      color: colors.$color-quaternary;
+    }
+  }
+}

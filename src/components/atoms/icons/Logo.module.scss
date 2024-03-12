@@ -1,0 +1,24 @@
+@use "../../settings/colors";
+@use "../../settings/sizes";
+
+.logo {
+  color: colors.$color-white;
+  display: inline-flex;
+  height: 3rem;
+
+  path {
+    display: none;
+
+    &:nth-child(1) {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: sizes.$tablet) {
+    height: 2.9375rem;
+
+    path {
+      display: block;
+    }
+  }
+}
