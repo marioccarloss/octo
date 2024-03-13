@@ -1,6 +1,8 @@
+import { memo } from "react";
+
 import styles from "./Card.module.scss";
 
-export const Card = () => {
+export const Card = memo(() => {
   return (
     <article className={styles.card}>
       <header>Covered</header>
@@ -13,4 +15,6 @@ export const Card = () => {
       </section>
     </article>
   );
-};
+});
+
+Card.displayName = "Card";

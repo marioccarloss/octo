@@ -1,0 +1,127 @@
+@use "../settings/colors";
+@use "../settings/sizes";
+
+.brands {
+  background-color: colors.$color-tertiary;
+
+  h2 {
+    background-color: colors.$color-quaternary;
+    color: colors.$color-tertiary;
+    padding: 1rem 6rem 1rem 0;
+    font-family: "Grotesk-Bold-Extended", sans-serif;
+    line-height: 1;
+    display: inline-flex;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -0.5rem;
+      width: 0;
+      height: 0;
+      border-left: 4.5rem solid transparent;
+      border-right: 0 solid transparent;
+      border-top: 4.5rem solid colors.$color-tertiary;
+    }
+  }
+
+  &__arrow {
+    background-color: colors.$color-quaternary;
+    flex-grow: 1;
+    height: 0.12rem;
+    border-right: 0.12rem solid colors.$color-tertiary;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    width: 40%;
+    z-index: 10;
+
+    &::before {
+      content: "";
+      background-color: colors.$color-quaternary;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2rem;
+      width: 0.12rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      right: -0.62rem;
+      width: 0;
+      height: 0;
+      border-left: 0.82rem solid transparent;
+      border-right: 0.82rem solid transparent;
+      border-top: 1rem solid colors.$color-quaternary;
+    }
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 18rem;
+      left: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      background-color: colors.$color-quaternary;
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 90%;
+
+    span {
+      height: 1.12rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (min-width: 666px) {
+    &__arrow {
+      left: 16rem;
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: sizes.$tablet) {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+
+    h2 {
+      padding: 1.25rem 6rem 1.25rem 0;
+    }
+
+    &__arrow {
+      width: 40%;
+    }
+
+    header {
+      > div {
+        margin: auto 0 auto auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: sizes.$desktopSmall) {
+    &__arrow {
+      width: 50%;
+    }
+  }
+}

@@ -8,7 +8,7 @@ import { Card } from "components/molecules/Card";
 import { useData } from "hooks/useData";
 
 import image from "assets/images/happy.png";
-import cover from "assets/images/bg_octo.png";
+import cover from "assets/images/cover.png";
 import styles from "./Hero.module.scss";
 
 const Hero = memo(() => {

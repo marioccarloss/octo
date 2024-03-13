@@ -25,6 +25,7 @@
 
   &--primary {
     background-color: colors.$color-secondary;
+    color: colors.$color-primary;
 
     &::before,
     &::after {
@@ -48,5 +49,11 @@
       height: calc(100% - 0.42rem);
       width: 0.42rem;
     }
+  }
+
+  &--secondary {
+    background: colors.$color-primary;
+    color: colors.$color-quaternary;
+    font: typography.$font--primary;
   }
 }
